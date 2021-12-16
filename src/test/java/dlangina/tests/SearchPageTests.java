@@ -37,5 +37,30 @@ public class SearchPageTests extends TestBase {
           .shouldHave(text("rvision@rvision.pro"));
     });
   }
+
+  @Tag("regress")
+  @DisplayName("Проверка блока контактов на странице c результатами поиска- найдено 0 результатов")
+  @Test
+  void checkContactsBlockOnSearchResultPageNoResults() {
+    step("Открытие главной страницы", () ->
+        open("https://new.rvision.ru/"));
+    step("Закрытие модального окна 'Мы используем Cookie'", () ->
+        $(".t-modal__close-cookie").click());
+    step("Нажатие иконки поиска", () ->
+        $(".t-header-search__btn").shouldBe(visible).click());
+    step("Поиск по запросу 'R-Vision'", () -> {
+      $(".t-header-search__input").setValue("noResults").pressEnter();
+      $(".contacts-block").shouldBe(visible);
+    });
+    step("Проверка блока контактов", () -> {
+      $(".contacts-block__head").shouldHave(
+          exactText("Не нашли то, что искали? Обратитесь по указанным контактам"));
+      $(".contacts-block ")
+          .shouldHave(text("Телефон"))
+          .shouldHave(text("+7 (499) 322-80-40"))
+          .shouldHave(text("email"))
+          .shouldHave(text("rvision@rvision.pro"));
+    });
+  }
 }
 
