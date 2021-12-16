@@ -2,18 +2,13 @@ package dlangina.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import dlangina.config.ProjectConfig;
 import dlangina.helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
-import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class TestBase {
-
-  public static ProjectConfig config = ConfigFactory.create(ProjectConfig.class,
-                                                            System.getProperties());
 
   @BeforeAll
   public static void config() {
