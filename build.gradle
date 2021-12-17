@@ -44,6 +44,16 @@ tasks.withType(Test) {
     systemProperties(System.getProperties())
     useJUnitPlatform()
 
+    if (System.getProperty("threads") != null) {
+        systemProperties += [
+                'junit.jupiter.execution.parallel.enabled'                 : true,
+                'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
+                'junit.jupiter.execution.parallel.mode.classes.default'    : 'concurrent',
+                'junit.jupiter.execution.parallel.config.strategy'         : 'fixed',
+                'junit.jupiter.execution.parallel.config.fixed.parallelism': System.getProperty("threads").toInteger()
+        ]
+    }
+
     testLogging {
         lifecycle {
             events "started", "skipped", "failed", "standard_error", "standard_out"
@@ -53,7 +63,7 @@ tasks.withType(Test) {
 }
 
 task properties_tests(type: Test) {
-    systemProperty("browser", System.getProperty("browser","firefox"))
+    systemProperty("browser", System.getProperty("browser", "firefox"))
     useJUnitPlatform {
         includeTags "properties"
     }
