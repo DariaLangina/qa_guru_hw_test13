@@ -41,7 +41,6 @@ compileTestJava {
 }
 
 tasks.withType(Test) {
-    systemProperties(System.getProperties())
     useJUnitPlatform()
 
     testLogging {
@@ -49,5 +48,15 @@ tasks.withType(Test) {
             events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
+    }
+}
+
+task properties_tests(type: Test){
+//    systemProperty("browser", System.getProperty("browser", "chrome"))
+//    systemProperty("browserVersion", System.getProperty("browserVersion", "93"))
+//    systemProperty("browserSize", System.getProperty("browserSize", "1024x768"))
+//    systemProperties(System.getProperties())
+    useJUnitPlatform{
+        includeTags "properties"
     }
 }
