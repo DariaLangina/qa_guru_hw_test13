@@ -11,9 +11,10 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@Tag("regress")
 public class SearchPageTests extends TestBase {
 
-  @Tag("regress")
+  @Tag("contacts")
   @DisplayName("Проверка блока контактов на странице c результатами поиска - найдено больше 0")
   @Test
   void checkContactsBlockOnSearchResultPage() {
@@ -38,7 +39,7 @@ public class SearchPageTests extends TestBase {
     });
   }
 
-  @Tag("regress")
+  @Tag("contacts")
   @DisplayName("Проверка блока контактов на странице c результатами поиска- найдено 0 результатов")
   @Test
   void checkContactsBlockOnSearchResultPageNoResults() {
