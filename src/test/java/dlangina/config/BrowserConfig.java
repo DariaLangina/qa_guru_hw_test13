@@ -2,10 +2,11 @@ package dlangina.config;
 
 import org.aeonbits.owner.Config;
 
+@Config.Sources({"classpath:config/browser.properties"})
 public interface BrowserConfig extends Config {
 
   @Key("browser")
-  @DefaultValue("CHROME")
+  @DefaultValue("chrome")
   String getBrowser();
 
   @Key("browserSize")
