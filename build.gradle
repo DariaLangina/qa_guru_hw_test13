@@ -55,7 +55,7 @@ task properties_tests(type: Test){
 //    systemProperty("browserVersion", System.getProperty("browserVersion", "93")) - не получается имено с версией
 //    systemProperty("browser", System.getProperty("browser", "chrome"))
 //    systemProperty("browserSize", System.getProperty("browserSize", "1024x768"))
-//    systemProperties(System.getProperties())
+    systemProperties(System.getProperties())
     useJUnitPlatform{
         includeTags "properties"
     }
