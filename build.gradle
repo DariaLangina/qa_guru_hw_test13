@@ -53,6 +53,7 @@ tasks.withType(Test) {
 }
 
 task properties_tests(type: Test) {
+    systemProperty("browser", System.getProperty("browser","firefox"))
     useJUnitPlatform {
         includeTags "properties"
     }

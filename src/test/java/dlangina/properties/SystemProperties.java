@@ -9,7 +9,6 @@ public class SystemProperties {
   @Test
   @Tag("properties")
   void someTest() {
-
     String browser = System.getProperty("browser");
     String browserSize = System.getProperty("browserSize");
 
