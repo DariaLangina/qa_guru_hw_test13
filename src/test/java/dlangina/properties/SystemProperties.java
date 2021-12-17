@@ -15,8 +15,8 @@ public class SystemProperties {
   @Tag("properties")
   void someTest() {
     System.out.println("Hello world!");
-//    System.out.println(browser);
+    System.out.println(browser);
 //    System.out.println(browserVersion);
-//    System.out.println(browserSize);
+    System.out.println(browserSize);
   }
 }
