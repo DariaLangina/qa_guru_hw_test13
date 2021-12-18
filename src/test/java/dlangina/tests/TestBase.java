@@ -14,7 +14,7 @@ import org.junit.jupiter.api.BeforeAll;
 public class TestBase {
 
   @BeforeAll
-  public static void start() {
+  public static void setUp() {
     SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     DriverSettings.config();
     closeWeUseCookieModal();
