@@ -4,8 +4,10 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
+import com.codeborne.selenide.logevents.SelenideLogger;
 import dlangina.helpers.Attach;
 import dlangina.helpers.DriverSettings;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 
@@ -13,6 +15,7 @@ public class TestBase {
 
   @BeforeAll
   public static void start() {
+    SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     DriverSettings.config();
     closeWeUseCookieModal();
   }
