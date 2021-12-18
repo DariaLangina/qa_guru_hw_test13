@@ -8,13 +8,21 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 import com.codeborne.selenide.Condition;
+import io.qameta.allure.AllureId;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+@Epic("Продукты")
+@Feature("Информация о продукте")
+@Story("Блок информации о продукте")
 @Tag("smoke")
 public class PageIntroTests extends TestBase {
 
+  @AllureId("#6217")
   @DisplayName("Проверка компонентов информационного блока продукта R‑Vision SENSE")
   @Test
   void checkInfoBlockComponentsForSense() {
@@ -34,6 +42,7 @@ public class PageIntroTests extends TestBase {
     });
   }
 
+  @AllureId("6218")
   @DisplayName("Проверка перехода на блок 'Запрос на демо' по нажатию кнопки 'Запросить демо'")
   @Test
   void checkScrollingToDemoBlockByClickButton() {
@@ -47,6 +56,7 @@ public class PageIntroTests extends TestBase {
         $("#demomodal").shouldBe(attribute("data-animate", "true")));
   }
 
+  @AllureId("6219")
   @Tag("smoke")
   @DisplayName("Проверка перехода на блок 'Материалы' по нажатию кнопки 'Материалы'")
   @Test
