@@ -20,8 +20,8 @@ public class SearchPageTests extends TestBase {
   void checkContactsBlockOnSearchResultPage() {
     step("Открытие главной страницы", () ->
         open("https://new.rvision.ru/"));
-    step("Закрытие модального окна 'Мы используем Cookie'", () ->
-        $(".t-modal__close-cookie").click());
+//    step("Закрытие модального окна 'Мы используем Cookie'", () ->
+//        $(".t-modal__close-cookie").click());
     step("Нажатие иконки поиска", () ->
         $(".t-header-search__btn").shouldBe(visible).click());
     step("Поиск по запросу 'R-Vision'", () -> {
@@ -45,8 +45,8 @@ public class SearchPageTests extends TestBase {
   void checkContactsBlockOnSearchResultPageNoResults() {
     step("Открытие главной страницы", () ->
         open("https://new.rvision.ru/"));
-    step("Закрытие модального окна 'Мы используем Cookie'", () ->
-        $(".t-modal__close-cookie").click());
+//    step("Закрытие модального окна 'Мы используем Cookie'", () ->
+//        $(".t-modal__close-cookie").click());
     step("Нажатие иконки поиска", () ->
         $(".t-header-search__btn").shouldBe(visible).click());
     step("Поиск по запросу 'R-Vision'", () -> {
