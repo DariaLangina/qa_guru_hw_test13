@@ -21,11 +21,6 @@ import org.junit.jupiter.api.Test;
 @Tag("regress")
 public class SearchPageTests extends TestBase {
 
-//  @BeforeAll
-//  public static void ensurePrecondition() {
-//    closeWeUseCookieModal();
-//  }
-
   @AllureId("6215")
   @Tag("contacts")
   @DisplayName("Проверка блока контактов на странице c результатами поиска - найдено больше 0")

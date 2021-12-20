@@ -23,11 +23,6 @@ import org.junit.jupiter.api.Test;
 @Tag("smoke")
 public class PageIntroTests extends TestBase {
 
-//  @BeforeAll
-//  public static void ensurePrecondition() {
-//    closeWeUseCookieModal();
-//  }
-
   @AllureId("#6217")
   @DisplayName("Проверка компонентов информационного блока продукта R‑Vision SENSE")
   @Test
