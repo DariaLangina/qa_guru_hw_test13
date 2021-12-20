@@ -18,7 +18,7 @@ import org.junit.jupiter.api.Test;
 @Feature("Страница 'Контакты")
 @Story("Информация")
 @Tag("smoke")
-public class ContactPageTests {
+public class ContactPageTests extends TestBase {
 
   @AllureId("#6248")
   @DisplayName("Проверка информации в блоке 'Консультация по продуктам'")
