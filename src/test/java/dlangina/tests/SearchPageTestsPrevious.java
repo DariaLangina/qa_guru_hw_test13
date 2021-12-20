@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test;
 @Story("Страница результатов поиска")
 @Tag("regress")
 @Disabled
-public class SearchPageTests extends TestBase {
+public class SearchPageTestsPrevious extends TestBase {
 
   @AllureId("6215")
   @Tag("contacts")

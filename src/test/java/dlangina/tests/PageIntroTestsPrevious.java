@@ -14,6 +14,7 @@ import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -22,7 +23,8 @@ import org.junit.jupiter.api.Test;
 @Feature("Информация о продукте")
 @Story("Блок информации о продукте")
 @Tag("smoke")
-public class PageIntroTests extends TestBase {
+@Disabled
+public class PageIntroTestsPrevious extends TestBase {
 
   @BeforeAll
   static void ensurePrecondidtion() {
@@ -49,7 +51,7 @@ public class PageIntroTests extends TestBase {
     });
   }
 
-  @AllureId("6218")
+  @AllureId("#6218")
   @DisplayName("Проверка перехода на блок 'Запрос на демо' по нажатию кнопки 'Запросить демо'")
   @Test
   void checkScrollingToDemoBlockByClickButton() {
