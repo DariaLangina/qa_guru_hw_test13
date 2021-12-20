@@ -20,6 +20,7 @@ public class TestBase {
   public static void setUp() {
     SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     DriverSettings.config();
+    closeWeUseCookieModal();
   }
 
   public static void closeWeUseCookieModal() {
