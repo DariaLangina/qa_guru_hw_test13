@@ -11,7 +11,6 @@ import io.qameta.allure.AllureId;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -26,12 +25,9 @@ public class SearchPageTests extends TestBase {
   @Tag("contacts")
   @DisplayName("Проверка блока контактов на странице c результатами поиска - найдено больше 0")
   @Test
-  @Disabled
   void checkContactsBlockOnSearchResultPage() {
     step("Открытие главной страницы", () ->
         open("https://new.rvision.ru/"));
-//    step("Закрытие модального окна 'Мы используем Cookie'", () ->
-//        $(".t-modal__close-cookie").click());
     step("Нажатие иконки поиска", () ->
         $(".t-header-search__btn").shouldBe(visible).click());
     step("Поиск по запросу 'R-Vision'", () -> {
@@ -53,12 +49,9 @@ public class SearchPageTests extends TestBase {
   @Tag("contacts")
   @DisplayName("Проверка блока контактов на странице c результатами поиска- найдено 0 результатов")
   @Test
-  @Disabled
   void checkContactsBlockOnSearchResultPageNoResults() {
     step("Открытие главной страницы", () ->
         open("https://new.rvision.ru/"));
-//    step("Закрытие модального окна 'Мы используем Cookie'", () ->
-//        $(".t-modal__close-cookie").click());
     step("Нажатие иконки поиска", () ->
         $(".t-header-search__btn").shouldBe(visible).click());
     step("Поиск по запросу 'R-Vision'", () -> {

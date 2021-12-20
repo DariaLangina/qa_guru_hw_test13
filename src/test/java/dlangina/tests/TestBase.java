@@ -24,10 +24,12 @@ public class TestBase {
   }
 
   public static void closeWeUseCookieModal() {
+//    private SelenideElement cookies = $(".t-modal__close-cookie");
     step("Открытие главной страницы", () ->
         open("https://new.rvision.ru/"));
     step("Закрытие модального окна 'Мы используем Cookie'", () ->
         $(".t-modal__close-cookie").click());
+
   }
 
   @AfterEach

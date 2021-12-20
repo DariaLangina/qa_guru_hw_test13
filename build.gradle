@@ -26,6 +26,8 @@ dependencies {
             "com.codeborne:selenide:$selenideVersion",
             "org.aeonbits.owner:owner:1.0.12",
             "io.qameta.allure:allure-selenide:$allureVersion",
+            "io.rest-assured:rest-assured:4.3.1",
+            "io.qameta.allure:allure-rest-assured:$allureVersion",
             "org.assertj:assertj-core:3.19.0",
             "org.junit.jupiter:junit-jupiter:$junitVersion")
     testRuntimeOnly(
@@ -63,9 +65,9 @@ tasks.withType(Test) {
     }
 }
 
-task properties_tests(type: Test) {
-    systemProperty("browser", System.getProperty("browser", "firefox"))
-    useJUnitPlatform {
-        includeTags "properties"
-    }
-}
+//task properties_tests(type: Test) {
+//    systemProperty("browser", System.getProperty("browser", "firefox"))
+//    useJUnitPlatform {
+//        includeTags "properties"
+//    }
+//}
