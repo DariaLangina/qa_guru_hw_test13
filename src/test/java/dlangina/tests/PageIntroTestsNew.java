@@ -20,7 +20,7 @@ import org.junit.jupiter.api.Test;
 @Tag("smoke")
 public class PageIntroTestsNew extends TestBase {
 
-  @AllureId("#6217")
+  @AllureId("6247")
   @DisplayName("Проверка компонентов информационного блока продукта R‑Vision SENSE")
   @Test
   void checkInfoBlockComponentsForSense() {

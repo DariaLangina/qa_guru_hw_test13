@@ -20,7 +20,7 @@ import org.junit.jupiter.api.Test;
 @Tag("smoke")
 public class ContactPageTests extends TestBase {
 
-  @AllureId("#6248")
+  @AllureId("6248")
   @DisplayName("Проверка информации в блоке 'Консультация по продуктам'")
   @Test
   void checkInfoBlockComponentsForSense() {
